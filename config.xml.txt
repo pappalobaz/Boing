@@ -1,0 +1,80 @@
+
+Products
+Get Started
+Docs
+App Showcase
+Blog
+
+Docs Home
+Getting Started
+
+
+
+
+
+Tutorials
+
+
+
+References
+
+
+
+
+
+PhoneGap Build
+Overview
+Getting Started
+Configuring
+Signing Overview
+Tools
+Developer API
+Support
+FAQ
+
+Configuring
+PhoneGap and PhoneGap Build are built upon the Apache Cordova Project. Spend some time at docs.cordova.io to get more familiar with how PhoneGap and Cordova applications are configured.
+PhoneGap applications are configured using a config.xml file. This should be at the root of your application.
+The config.xml file follows the W3C widget specification. It allows developers to easily specify metadata about their applications. You can see a sample config.xml with our PhoneGap Start application.
+We're continually adding features to our config.xml support to give PhoneGap Build developers more power to customize their apps. If there are any specific features you'd like to see support for, please let us know.
+Essential Properties
+Example config.xml
+Essential Properties
+<widget>
+The widget element must be the root of your XML document - it lets us know that you are following the W3C specification. When using PhoneGap Build, ensure you have the following attributes set on your widget element. It supports the following attributes:
+id: the unique identifier for your application. To support all supported platforms, this must be reverse-domain name style (e.g. com.yourcompany.yourapp)
+version: for best results, use a major/minor/patch style version, with three numbers, such as 0.0.1
+versionCode: (optional) when building for Android, you can set the versionCode by specifying it in your config.xml. For more information on Android's versionCode attribute, see the Android documentation.
+<name>
+The name of the application.
+<description>
+A description for your application.
+<author>
+The author of the application, either a company or individual (required for Windows 10 builds).
+<platform>
+You can have zero or more of these elements present in your config.xml. Set the name attribute to one of ios, android, or windows. If you specify none, all platforms will be built. Example usage:
+<platform name="ios" />
+<platform name="android" />
+<platform name="winphone" />
+All of the above fields are standard Cordova config.xml tags. For more detailed info about the above elements, and all the others available, see the Cordova config.xml documentation. Most of these will work on PhoneGap Build, but if you face issues with any specific tags, let us know.
+Example Config.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "nope"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Boing</name>
+
+  <description>
+      
+  </description>
+
+  <author href="https://build.phonegap.com" email="support@phonegap.com">
+      Pappa
+  </author>
+<icon scr="neon.png" />
+</widget>
